@@ -1,0 +1,39 @@
+<a href="index.html">Voltar</a>
+
+<h1>JavaScript sem classes</h1>
+<h2>ECMAScript 5</h2>
+
+<script>
+
+// Criando um objeto em JavaScript
+var caneta = {
+    
+    // Atributos
+    tinta: 'preta',
+    marca: 'Pilot',
+
+    // Métodos (arrow function)
+    escrever: (texto) => {
+        console.log(`Escrevendo com a caneta '${caneta.tinta}' o texto "${texto}".`);
+    },
+
+    trocaCor: (cor) => {
+        if(cor == 'azul' || cor == 'vermelha' || cor == 'preta') {
+            console.log(`Trocando a cor da tinta para '${cor}'.`);
+            caneta.tinta = cor;
+        } else {
+            console.error(`A cor '${cor}' é inválida. Usando a cor '${caneta.tinta}'.`);
+        }
+    }
+
+}
+
+// Testando objeto (instância)
+console.log('A cor da caneta é', caneta.tinta); // Formato 1
+console.log('A marca da caneta é', caneta['marca']); // Formato 2
+
+caneta.trocaCor('azul');
+
+caneta.escrever('Biscoito');
+
+</script>
