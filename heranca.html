@@ -1,0 +1,46 @@
+<script>
+
+    class Car {
+        brand;
+        model;
+
+        setBrand(brand) { this.brand = brand; }
+        getBrand() { return this.brand; }
+        setModel(model) { this.model = model; }
+        getModel() { return this.model; }
+    }
+
+    class Utilit extends Car {
+        axis;
+        weight;
+
+        setAxis(axis) { this.axis = axis; }
+        getAxis() { return this.axis; }
+        setWeight(weight) { this.weight = weight; }
+        getWeight() { return this.weight; }
+    }
+
+    class Sport extends Car {
+        velocity;
+        cilinders;
+
+        setVelocity(velocity) { this.velocity = velocity; }
+        getVelocity() { return this.velocity; }
+        setCilinders(cilinders) { this.cilinders = cilinders; }
+        getCilinders() { return this.cilinders; }
+    }
+
+    var carro1 = new Car();
+    carro1.setBrand('Fiat');
+    carro1.setModel('147');
+    console.log(carro1.getBrand(), carro1.getModel());
+
+    var carro2 = new Utilit();
+    carro2.setBrand("Mercedes");
+    carro2.setModel("1302");
+    carro2.setAxis(3);
+    carro2.setWeight(3000);
+
+    console.log(carro2);
+
+</script>
